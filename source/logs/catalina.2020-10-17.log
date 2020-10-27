@@ -1,0 +1,23 @@
+17-Oct-2020 18:40:28.708 信息 [Thread-4] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+17-Oct-2020 18:40:28.731 信息 [Thread-4] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+17-Oct-2020 18:40:28.774 信息 [Thread-4] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+17-Oct-2020 18:40:28.861 信息 [Thread-4] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+17-Oct-2020 18:40:28.863 警告 [Thread-4] org.apache.tomcat.util.net.NioEndpoint.unbind Failed to close server socket for [http-nio-8080]
+	java.io.IOException: Broken pipe
+		at sun.nio.ch.NativeThread.signal(Native Method)
+		at sun.nio.ch.ServerSocketChannelImpl.implCloseSelectableChannel(ServerSocketChannelImpl.java:292)
+		at java.nio.channels.spi.AbstractSelectableChannel.implCloseChannel(AbstractSelectableChannel.java:234)
+		at java.nio.channels.spi.AbstractInterruptibleChannel.close(AbstractInterruptibleChannel.java:115)
+		at sun.nio.ch.ServerSocketAdaptor.close(ServerSocketAdaptor.java:137)
+		at org.apache.tomcat.util.net.NioEndpoint.doCloseServerSocket(NioEndpoint.java:354)
+		at org.apache.tomcat.util.net.NioEndpoint.unbind(NioEndpoint.java:334)
+		at org.apache.tomcat.util.net.AbstractEndpoint.destroy(AbstractEndpoint.java:1251)
+		at org.apache.coyote.AbstractProtocol.destroy(AbstractProtocol.java:653)
+		at org.apache.catalina.connector.Connector.destroyInternal(Connector.java:1130)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:321)
+		at org.apache.catalina.core.StandardService.destroyInternal(StandardService.java:576)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:321)
+		at org.apache.catalina.core.StandardServer.destroyInternal(StandardServer.java:858)
+		at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:321)
+		at org.apache.catalina.startup.Catalina.stop(Catalina.java:763)
+		at org.apache.catalina.startup.Catalina$CatalinaShutdownHook.run(Catalina.java:863)
